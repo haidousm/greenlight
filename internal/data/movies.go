@@ -60,7 +60,7 @@ func (m MovieModel) Get(id int64) (*Movie, error) {
 	}
 
 	var movie Movie
-	stmt := `id, created_at, title, year, runtime, genres, version
+	stmt := `SELECT id, created_at, title, year, runtime, genres, version
 				FROM movies
 				WHERE id = $1`
 
